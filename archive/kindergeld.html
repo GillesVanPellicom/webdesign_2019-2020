@@ -1,0 +1,43 @@
+<!doctype html>
+<head>
+</head>
+<body>
+	<script>
+		var naam = prompt("Voer uw naam in","naam")
+		var aant = prompt("Voer uw aantal kinderen in","0");
+		var loon = prompt("Voer uw maandloon in","0");
+		var mem1 = 0;
+		var mem2 = 0;
+		var mem3 = 0;
+		var minbed = aant*25
+		if (aant <= 2) {
+			mem1 = 25*aant;
+		} else if (aant <= 4) {
+			mem1 = 25*aant+((aant-2)*12.50);
+		} else {
+			mem1 = 25*aant+((aant-2)*12.50)+((aant-4)*7.50);
+		}
+
+		if (loon <= 500) {
+			mem2 = (mem1/100)*25;
+			mem1 = mem1+mem2;
+		} else if (loon > 2000) {
+			mem2 = (mem1/100)*45
+			mem1 = mem1-mem2
+		} 
+		document.write("Beste "+naam+",<br>");
+		document.write("Het berekende kindergeld bedraagd: €"+mem1+"<br>");
+		if (mem1 < minbed) {
+		document.write("Vermitst dit onder het minimum bedrag is voor "+aant+ "kinderen, (€"+minbed+") <br>");
+		document.write("krijg je het mimimumbedrag: €"+minbed+"<br>");
+		mem3 = minbed-mem1;
+		document.write("Je krijgt dus €"+mem3+" meer dan de berekening")
+		} else {
+		document.write("Vermitst dit boven het minimum bedrag is voor "+aant+ "kinderen, (€"+minbed+") <br>");
+		document.write("Krijg je het berekende bedrag: €"+mem1+"<br>");
+		mem3 = mem1-minbed;
+		document.write("Je krijgt dus €"+mem3+" meer dan het minimumbedrag")
+		}
+	</script>
+
+</body>

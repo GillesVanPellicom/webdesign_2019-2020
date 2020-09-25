@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="">
+    <script>
+        function testPop() {
+        var popup = window.open();
+        popup.document.write("tekst");
+        }
+
+        function datum() {
+            alert(Date());
+        }
+        function bgAndTxtColor() {
+            document.bgColor = "#242424";
+            var i = Math.floor(Math.random() * 8);
+            var color = [];
+                color[0] = "orange";
+                color[1] = "green";
+                color[2] = "blue";
+                color[3] = "gold";
+                color[4] = "purple";
+                color[5] = "white";
+                color[6] = "red";
+                color[7] = "lime";
+            document.fgColor = color[i];
+        }
+        function titleA() {
+            document.title = "Nnnnnnnnni";
+        }
+        function lilMath() {
+            var a = prompt("Voer een getal in aub.", "0");
+            var b = prompt("Voer nog een getal in aub.", "0");
+            var c = a * b;
+            alert("De uitkomst is: " + c);
+        }
+        function brwsrInfo() {
+            alert("De naam van u browser is "+navigator.appName+" en de versie is "+navigator.appVersion);
+        }
+    </script>
+</head>
+
+<body onload="testPop()">
+    kkkekeifirjfiijflscbceifjeozfp<br>
+    <input type="button" onclick="datum()" value="Datum"><br>
+
+    <input type="button" onclick="bgAndTxtColor()" value="Backgound and/or text color change"><br>
+
+    <input type="button" onclick="titleA()" value="Recieve a title for your sssshrubbery"><br>
+
+    <input type="button" onclick="lilMath()" value="Kleine berekening"><br>
+
+    <input type="button" onclick="brwsrInfo()" value="Tell me about yout browser"><br>
+
+    <input type="button" onclick="" value="Placeholder"><br>
+
+    <input type="button" onclick="" value="Placeholder"><br>
+
+
+
+
+</body>
+
+</html>

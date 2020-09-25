@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zoek het midden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #242424;
+            color: white;
+            background-size: cover;
+        }
+
+        #container {
+            background-color: #191A1B;
+            border: 5px solid #141414;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #circle {
+            background-color: white;
+            position: absolute;
+            border-radius: 30%;
+            width: 50px;
+            height: 50px;
+        }
+
+        input {
+            background-color: #191A1B;
+            color: white;
+            border: 2px solid #141414;
+            font-size: 1.5rem;
+            padding: 5px 3px;
+            margin: 5px;
+        }
+
+        .button {
+            width: 40px;
+            height: 40px;
+            border-radius: 30%;
+            padding: 2px;
+        }
+
+        #coordinates {
+            margin: 5%;
+            position: relative;
+            background-color: #191A1B;
+            border: 5px solid #141414;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 390px;
+            margin-top: 80px;
+            padding: 5px;
+        }
+
+        #cheats2 {
+            margin-left: 68.5%;
+            position: relative;
+            background-color: #191A1B;
+            border: 5px solid #141414;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 25%;
+            height: 390px;
+            margin-top: 80px;
+            padding: 5px;
+        }
+
+        #controls {
+            margin: 0 auto;
+            position: relative;
+        }
+    </style>
+    <script>
+
+        //null-document.addEventListener("")
+        //Variabelen voor positie
+        var zetten = 0;
+        var posx = 0;
+        var posy = 0;
+        //Boolean cheat menu hidden
+        var cheatsHidden = true;
+        //Variabel increment beweging
+        var inc = 5;
+        //Variabel voor ig timer
+        var clock = 0;
+        //Boolean om eerste zet aan te duiden.
+        var first = true;
+        // Multiplier voor timer
+        var tMult = 1;
+        //4 functies om beweging en collisie te controleren
+        function right() {
+            let cir = document.getElementById("circle");
+            timer()
+            if (posx < 350) {
+                posx = Number(posx) + Number(inc);
+                refreshX()
+                zetten++
+                cir.style.left = posx + 'px';
+                check();
+            } else return;
+        }
+        function left() {
+            let cir = document.getElementById("circle");
+            timer()
+            if (posx > 0) {
+                posx = Number(posx) - Number(inc);
+                refreshX()
+                zetten++
+                cir.style.left = posx + 'px';
+                check();
+            } else return;
+        }
+        function down() {
+            let cir = document.getElementById("circle");
+            timer()
+            if (posy < 350) {
+                posy = Number(posy) + Number(inc);
+                refreshY()
+                zetten++
+                cir.style.top = posy + 'px';
+                check();
+            } else return;
+        }
+        function up() {
+            let cir = document.getElementById("circle");
+            timer()
+            if (posy > 0) {
+                posy = Number(posy) - Number(inc);
+                refreshY()
+                zetten++;
+                cir.style.top = posy + 'px';
+                check();
+            } else return;
+        }
+
+        //Checkt of in het midden zit, runt na elke beweging en verhoogt het aantal zetten.
+        function check() {
+            document.getElementById("aantalZet").innerHTML = zetten;
+            if (posx == 170 && posy == 170) {
+                document.getElementById("titel").innerHTML = "Joe has found the middle eh.";
+                document.querySelector("body").style.backgroundImage = "url('https://media.giphy.com/media/13BwjdpxACoBPO/source.gif')"
+            } else {
+                document.getElementById("titel").innerHTML = "Zoek het midden"
+                document.querySelector("body").style.backgroundImage = "none"
+            }
+        }
+
+        //Reset de cirkel naar 0,0
+        function reset() {
+            let cir = document.getElementById("circle");
+            posy = 0;
+            refreshY();
+            posx = 0;
+            refreshX();
+            cir.style.top = posy + 'px';
+            cir.style.left = posx + 'px';
+            check();
+        }
+
+        //2 Fucnties om de X en Y coordinaat in het cheat menu te refreshen
+        function refreshX() {
+            document.getElementById("positieX").innerHTML = " " + posx
+        }
+        function refreshY() {
+            document.getElementById("positieY").innerHTML = " " + posy
+        }
+
+        //Functie om naar het midden te teleporteren
+        function mid() {
+            let cir = document.getElementById("circle");
+            posy = 170;
+            refreshY();
+            posx = 170;
+            refreshX();
+            cir.style.top = posy + 'px';
+            cir.style.left = posx + 'px';
+            check();
+        }
+
+        //Functie om het cheatmenu zichtbaar en onzichtbaar te maken
+        function cheats() {
+            if (cheatsHidden) {
+                document.getElementById("coordinates").style.visibility = "visible";
+                document.getElementById("cheats2").style.visibility = "visible";
+                cheatsHidden = false;
+            } else {
+                document.getElementById("coordinates").style.visibility = "hidden";
+                document.getElementById("cheats2").style.visibility = "hidden";
+                cheatsHidden = true;
+            }
+        }
+
+        //Functie om het increment van beweging te veranderen
+        function changeInc() {
+            inc = prompt("Voer een nieuw increment in. (veelvouden van vijf tot 350, default 5)", 0);
+        }
+        function changeMoves() {
+            zetten = prompt("Voer een nieuw aantal zetten in.", 0);
+            check()
+        }
+
+        //Functie om de move teller te resetten
+        function resetMoves() {
+            zetten = 0;
+            check()
+        }
+
+        //Functie dat de timer aanzet bij een eerste zet
+        function timer() {
+            if (first) {
+                timer2()
+                first = false;
+            }
+        }
+
+        //Timer loop
+        function timer2() {
+            clock++
+            document.getElementById("tempo").innerHTML = clock;
+            setTimeout(timer2, 1000 * tMult)
+        }
+
+        //Functie om de timer van 0 te laten beginnen (niet om de timer te stoppen)
+        function resetTimer() {
+            clock = 0;
+            document.getElementById("tempo").innerHTML = clock;
+        }
+
+        //Funcite om de timer van een bepaald getal te laten beginnen (niet om de timer te stoppen)
+        function setTimer() {
+            clock = prompt("Voer een natuurlijk getal in", 0);
+            document.getElementById("tempo").innerHTML = clock;
+        }
+
+        //Functie om een nieuwe timer multiplier op te vragen
+        function timeMulti() {
+            tMult = prompt("Voer een nieuwe multiplier in (default 1.0, smaller is faster), 1");
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 id="titel">Zoek het midden</h1>
+    <div id="container">
+        <div id="circle"></div>
+        
+    </div>
+
+    <table id="controls" border="0">
+        <tr>
+            <td>
+                <div id="aantalZet">0</div>
+            </td>
+            <td><input type="button" value="&uarr;" class="button" onclick="up()"><br></td>
+            <td>
+                <div id="tempo">0</div>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="&larr;" class="button" onclick="left()"></td>
+
+            <td><input type="button" value=" " class="button" onclick="cheats()"></td>
+            <td><input type="button" value="&rarr;" class="button" onclick="right()"><br></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="button" value="&darr;" class="button" onclick="down()"><br></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <div class="cheats" id="coordinates" style="visibility: hidden;">
+        <h2>Cheat menu</h2>
+        Win criteria: x: 170, y: 170<br>
+        Position x:<strong id="positieX"> 0</strong><br>
+        Position y:<strong id="positieY"> 0</strong><br><br>
+
+        <input type="button" value="Change increment" onclick="changeInc()"><br>
+        <input type="button" value="Change # moves" onclick="changeMoves()">
+        <input type="button" value="Reset # moves" onclick="resetMoves()">
+    </div>
+    <div class="cheats" align="left" id="cheats2" style="visibility: hidden;">
+        <input type="button" value="Reset timer" onclick="resetTimer()">
+        <input type="button" value="Set timer" onclick="setTimer()">
+        <input type="button" value="Reset avatar" onclick="reset()"><br>
+        <input type="button" value="Goto middle" onclick="mid()"><br>
+        <input type="button" value="Timer mp" onclick="timeMulti()">
+    </div>
+</body>
+
+</html>

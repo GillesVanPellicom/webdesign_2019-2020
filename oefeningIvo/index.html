@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Invulformelier</title>
+    <link rel="stylesheet" href="style/index.css">
+    <script type="text/javascript" src="script/index.js"></script>
+</head>
+
+<body>
+    <div id="main" align="center">
+        <div id="innerShadow">
+            <form name="input" method="POST" id="form">
+                <fieldset id="formFieldset">
+                    <legend>Invulformelier</legend>
+                    <table border="1">
+                        <tr>
+                            <td>Naam en voornaam:</td>
+                            <td><input type="text" name="naamEnVoornaam" id="textNaamEnVoornama"></td>
+                        </tr>
+                        <tr>
+                            <td>Postcode:</td>
+                            <td><input type="text" name="postcode" id="textPostcode"></td>
+                        </tr>
+                        <tr>
+                            <td>Email adres:</td>
+                            <td><input type="text" name="emailAdres" id="textEmailAdres"></td>
+                        </tr>
+                    </table>
+                    <br><br>
+                    <div id="slagBis">Ik wil slagen: <input type="checkbox" name="slagenCheckbox" value="slagen"><br>
+                        Ik wil bissen: <input type="checkbox" name="bissenCheckbox" value="bissen"></div>
+                        <br><br>
+                    <table id="studeer" align="left">
+                        <tr>
+                            <td>Ik studeer voldoende:</td>
+                            <td><input type="radio" name="studeerVoldoendeRadio" id="studeerVoldoendeRadioYes" value="neen" checked>Nee</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><input type="radio" name="studeerVoldoendeRadio" id="studeerVoldoendeRadioNo" value="ja">Ja</td>
+                        </tr>
+                    </table>
+
+                    <br><br><br>
+                    <button onclick="leesUit()">Verzend</button><br>
+                    <select onchange="colors()" na2me="S" id="paginaKleurSelect">
+                        <option value="1">Selecteer een nieuwe tekst- en paginakleur</option>
+                        <option value="2">Rood</option>
+                        <option value="3">Geel</option>
+                        <option value="4">Blauw</option>
+                    </select>
+                    <br><br>
+
+                </fieldset>
+            </form>
+            <div id="text">De velden hierboven mogen niet leeg zijn. <br>
+                Volgende velden worden gecontroleerd op de juiste ingave:
+                Postcode: max 4 digits toestaan, email: apestaart en een punt erna</div>
+        </div>
+        <div>
+            <section class="drieDozen">
+                <button class="purpleButton" onclick="swapColors()">Swap colors</button>
+            </section>
+
+            <section class="drieDozen">
+                <button class="purpleButton" onclick="footerHide()">Show footer</button>
+            </section>
+
+            <section class="drieDozen">
+                <button class="purpleButton" onclick="footerChange()">Change footer</button>
+            </section>
+        </div>
+    </div>
+    <footer id="footer">
+        © ik&mijzelf - toets webdesign 5INF - Mei 2020
+    </footer>
+</body>
+
+</html>

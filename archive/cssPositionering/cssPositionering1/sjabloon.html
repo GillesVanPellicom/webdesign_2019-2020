@@ -1,0 +1,78 @@
+<!Doctype html>
+<html>
+	<head>
+		<!--head-->
+		<title>YOUR_TITLE</title>
+		<meta name="viewport" content="width=device-width , initial-scale=1.0">
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			body > ul{
+				margin: 10px;
+				width: 110px;
+			}
+			li{
+				list-style: none;
+				margin: 1px;
+			}
+
+			li a{
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				color: black;
+				display: block;
+				background-color: purple;
+				text-decoration: none;
+				padding: 3px 10px;
+			}
+			li a:hover{
+				background-color: grey;
+			}
+			li a:active{
+				color: red;
+			}
+
+
+			ul ul{
+				display: none;
+				border: 2px solid black;
+
+			}
+			ul li:hover> ul {
+				display: inline-block;
+				position: absolute;
+				left: 120px;
+				top: 37px;
+
+			}
+
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li>
+				<a href="#">test</a>
+				<ul>
+					<li><a href="#">Producten</a></li>
+					<li><a href="#">Producten</a></li>
+					<li><a href="#">Producten</a></li>
+					<li><a href="#">Producten</a></li>
+					<li><a href="#">Producten</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Diensten</a></li>
+			<li><a href="#">Over ons</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+		<h1 id="h1"></h1>
+		<script>
+			document.querySelectorAll("a").forEach(element => {
+				element.addEventListener("click", (e)=>{
+					document.getElementById("h1").innerHTML = e.path[0].innerHTML;
+				})
+			})
+		</script>
+	</body>
+</html>

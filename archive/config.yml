@@ -1,0 +1,52 @@
+Drerrie:
+options:
+default: true
+prefix: &8[&7Drerrie&8] &8>>&r 
+permissions:
+- modifyworld.*
+- essentials.afk
+- essentials.back
+- essentials.balance
+- essentials.balance.others
+- essentials.baltop
+- essentials.hat
+- essentials.mail
+- essentials.mail.send
+- essentials.msg
+- essentials.msgtoggle
+- essentials.near
+- essentials.nick
+- essentials.pay
+- essentials.ptime
+- essentials.sethome.multiple
+- essentials.spawn
+- essentials.tpa
+- essentials.warp
+- essentials.warp.list
+Barboon:
+options:
+default: false
+prefix: &d&l[&5&lBarboon&d&l] &8>>&r 
+inheritance:
+- Drerrie
+permissions:
+- essentials.enderchest
+- essentials.heal
+- essentials.feed
+- essentials.fly
+- essentials.kittycannon
+- essentials.repair
+- essentials.sell.*
+Admin:
+options:
+default: false
+prefix: &4&l[&c&lAdministrator&4&l] &8>>&r 
+permissions:
+permissions.*
+users:
+Gh0stage:
+ group:
+ - Admin
+gilles353:
+group:
+- Admin

@@ -1,0 +1,19 @@
+img{
+	display: none;
+}
+img[alt]{
+	display: inline;
+}
+span > em{
+	color: blue;
+}
+span{
+	font-weight: 700;
+}
+a img{
+	border: 3px solid blue;
+}
+em + strong{
+	color: oranje;
+	font-size: 150%;
+}

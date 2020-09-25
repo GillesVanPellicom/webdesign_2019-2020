@@ -1,0 +1,57 @@
+body{
+	font-family: "Comic Sans MS";
+}
+#longtext{
+	text-align: justify;
+}
+#longText:first-letter{
+	color: #cc22ff;
+	font-size: 2em;
+}
+#longText:first-line{
+	color: rgb(0,50,100);
+}
+#longText:after{
+	content: 'DIT IS RODE TEXT';
+	background-color: red;
+}
+div p:before{
+	content: "-";
+}
+
+hr{
+	margin: 3% auto;
+}
+
+
+input{
+	padding: 0.5%;
+}
+input:focus{
+	background-color: #444;
+	color: #ccc;
+}
+
+
+
+
+div p:nth-child(even){
+	color: #eee;
+	background-color: #333;
+}
+div p:nth-child(even):hover{
+	color: #333;
+	background-color: #eee;
+}
+div p:nth-child(odd){
+	color: #333;
+	background-color: #eee;
+}
+div p:nth-child(odd):hover{
+	color: #eee;
+	background-color: #333;
+}
+div p{
+	margin: 0%;
+	padding: .5%
+}

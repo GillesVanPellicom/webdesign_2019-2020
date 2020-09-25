@@ -1,0 +1,112 @@
+<!Doctype html>
+<html>
+	<head>
+		<!--head-->
+		<title>Forms</title>
+		<meta name="viewport" content="width=device-width , initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<!--content-->
+		<form name="contactForm" method="get" action="#"><!--Get komt in url te staan, post is een package dat verstuurd wordt naar backend, action is wat er moet gebeuren-->
+			<fieldset>
+			<legend>Meerkeuze</legend>
+			<table>
+				<tr>
+					<td width="100">
+						<label for="voornaam">Voornaam</label>
+					</td>
+					<td>
+						<input type="text" name="voornaam" size="35"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="alertBtn">Send</label>
+					</td>
+					<td>
+						<input type="submit" name="alertBtn" value="Click" onclick=""><!-- type Submit of Reset--><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="nmbr">Nummer</label>
+					</td>
+					<td>
+						<input type="number" name="nmbr" min="0" max="10">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="checkKnop">Knoppeke</label>
+					</td>
+					<td>
+						<input type="checkbox" name="checkKnop" checked>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="radioKnop">Paswoord</label>
+					</td>
+					<td>
+						<input type="radio" name="radioKnop" value="ja" checked>Ja<br>
+						<input type="radio" name="radioKnop" value="nee" checked>Nee
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="wachtwoord">Paswoord</label>
+					</td>
+					<td>
+						<input type="password" name="wachtwoord">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="tekst">Tekst</label>
+					</td>
+					<td>
+						<textarea name="tekst" rows="10" cols="20">TEKST</textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="selecteren">Select</label>
+					</td>
+					<td>
+						<select name="selecteren">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><label for="multipleSelect">     Select     </label></pre><!--Neemt letterlijk alles over tabs en spaces-->
+					</td>
+					<td>
+						<select name="multipleSelect" size="3" multiple>
+							<option>Volvo</option>
+							<option>Saab</option>
+							<option>Mercedes</option>
+							<option>Audi</option>
+							<option>BMW</option>
+							<option>Fiat</option>
+							<option>Ford</option>
+							<option>Citroën</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<button onclick="alert('window')">ALERT</button>
+		</fieldset>
+		</form>
+	</body>
+</html>

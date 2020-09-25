@@ -1,0 +1,30 @@
+<!doctype html>
+<head>
+    <title>Javascript - remafstand</title>
+    <style>
+        body {
+            color:#FFFFFF;
+            background-color:#242424;
+            font-family:verdana, arial;
+            }
+    </style>
+</head>
+<body>
+    <script>
+	var V = prompt("Snelheid","0"); 
+	var wegnat = prompt("Weg nat?","neen");
+	if (wegnat == "ja") {
+        var reactieafstand = V/10*3;
+        var remafstand = ((V/10)*(V/10))/2;
+        var stopafstand = remafstand + reactieafstand;
+        alert("Reactie afstand: "+reactieafstand+" Remafstand: "+remafstand+" stopafstand: "+stopafstand);
+		} else if (wegnat == "neen") {
+	var reactieafstand = V/10*3;
+	var remafstand = ((V/10)*(V/10))/1.5;
+	var stopafstand = remafstand + reactieafstand;
+	alert("Reactie afstand: "+reactieafstand+" Remafstand: "+remafstand+" stopafstand: "+stopafstand);
+		} else {
+	alert("ja of neen")
+		}
+    </script>
+</body>

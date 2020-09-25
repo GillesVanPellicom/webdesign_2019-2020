@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+fieldset {
+  margin: 18px;
+}
+#main {
+  margin-left: 33%;
+  margin-top: 1%;
+  border-radius: 3%;
+  width: 425px;  
+  padding: 20px 10px;
+  box-shadow: 5px 5px 5px rgb(54, 52, 52);
+  background-color: green;
+}
+#innerShadow {
+  box-shadow: inset 3px 5px 10px black;
+  border: 2px inset silver;
+  border-radius: 3%;
+  background-color: lightgray ;
+}
+.drieDozen {
+  box-shadow: inset 3px 5px 10px black;
+  margin-top: 15px;
+  border-radius: 10px;
+  display: inline-block;
+  border: 2px inset silver;
+  padding: 0;
+  width: 120px;
+  height: 120px;
+  margin-right: 15px;
+  background-color: white;
+}
+footer {
+  text-align: center;
+  margin-top: 10px;
+  width: 430px;  
+  border-radius: 10px;
+  margin-left: 33%;
+  padding: 3px 10px;
+  box-shadow: 5px 5px 5px rgb(54, 52, 52);
+  background-color: green;
+  visibility: hidden;
+}
+.purpleButton {
+  background-color: purple;
+  margin: 95px auto 0 auto;
+  color: yellow;
+  padding: 3px;
+  border-radius: 18px;
+}
+#slagBis {
+  padding-left: 35px;
+  text-align: left;
+}
+#studeer {
+  padding-left: 33px;
+}
+#text {
+  padding-bottom: 30px;
+}

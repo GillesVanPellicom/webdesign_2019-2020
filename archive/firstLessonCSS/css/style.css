@@ -1,0 +1,17 @@
+body{
+	background-color: #282C2F;
+	color: #ddd;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+/*
+	 text-decoration: none;
+		Remove underline off link: A-tag
+*/
+
+p{
+	border-bottom: 1px solid white;
+	display: inline; /*om items achter elkaar te plaatsen*/
+}
+ol{
+	list-style-image: url(../images/icon.svg);
+}

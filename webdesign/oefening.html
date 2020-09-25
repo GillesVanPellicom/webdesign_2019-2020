@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Oefening</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="standardOefCss.css">
+        <style>
+            #a {
+                display: inline-block;
+                background-color: yellow;
+                padding: 25px;
+                margin: auto;
+            }
+        </style>
+        <script>
+            function randkleurRood() {
+                document.getElementById("a").style.border = "solid red 1px"
+            }
+            function zwarteRand() {
+                document.getElementById("a").style.border = "solid black 1px"
+            }
+            function smalleRand() {
+                document.getElementById("a").style.border = "solid black 2px"
+
+            }
+            function bredeRand() {
+                document.getElementById("a").style.border = "solid black 50px"
+            }
+            function groeneBck() {
+                document.getElementById("a").style.backgroundColor = "green"
+            }
+            function witteBck() {
+
+            }
+            function blauweTxt() {
+
+            }
+            function zwarteTxt() {
+
+            }
+            function schuineTxt() {
+                document.getElementById("a").innerHTML = "<i>Random element</i>";
+            }
+            function normaleTxt() {
+                document.getElementById("a").innerHTML = "Random element";
+            }
+            function groteLetters() {
+
+            }
+            function normaleLetters() {
+
+            }
+            function verbergen() {
+
+            }
+            function tonen() {
+
+            }
+            function test() {
+ 
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div id="a">Random element</div>
+        <div>
+            <span onmouseover="randkleurRood()">rode rand</span>&nbsp;&nbsp;
+            <span onmouseover="zwarteRand()">zwarte rand</span>&nbsp;&nbsp;
+            <span onmouseover="bredeRand()">brede rand</span>&nbsp;&nbsp;
+            <span onmouseover="smalleRand()">smalle rand</span>&nbsp;&nbsp;
+            <span onmouseover="groeneBck()">groene achtergrond</span>&nbsp;&nbsp;
+            <span onmouseover="witteBck()">witte achtergrond</span>&nbsp;&nbsp;
+            <span>blauwe tekst</span>&nbsp;&nbsp;
+            <span>zwarte tekst</span>&nbsp;&nbsp;
+            <span onmouseover="schuineTxt()">schuine tekst</span>&nbsp;&nbsp;
+            <span onmouseover="normaleTxt()">normale tekst</span>&nbsp;&nbsp;
+            <span>grote letters</span>&nbsp;&nbsp;
+            <span>normale letters</span>&nbsp;&nbsp;
+            <span onmouseover="verbergen()">verbergen</span>&nbsp;&nbsp;
+            <span onmouseover="tonen()">tonen</span>&nbsp;&nbsp;
+            <span onmouseover="test()">test</span>&nbsp;&nbsp;
+        </div>
+
+    </body>
+</html>

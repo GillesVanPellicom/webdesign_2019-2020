@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>For Loop (tafels)</title>
+</head>
+<link rel="stylesheet" href="standardOefCss.css">
+
+<body>
+    <script>
+        var a = prompt("Welke tafel wilt u zien?", "1");
+        var b = prompt("teken (+,-,*,/)", "+");
+        for (let i = 0; i <= 100; i++) {
+            //eval zijn berekeningen is stringvorm
+            //bij een ${} moeten er `` ipv "" of '' worder gebruikt. Else no work eh.
+            document.write(`${i} ${b} ${a} = ${eval(i + b + a)}<br>`);
+        }
+    </script>
+</body>
+
+</html>

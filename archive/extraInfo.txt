@@ -1,0 +1,19 @@
+selector: Body, p, h1
+event = lichtknop, een handeling
+
+a{}
+a:visited{}
+:hover{}//Hover ALTIJD na visited en a
+:active{}//ingedrukt houden
+text-decoration: none; //underline
+list-style-image: url(../images/icon.svg)
+background-image: url();
+background-repeat: no-repeat; repeat-x;
+position: fixed; //staat altijd vast, ook bij scrol zoals bv nav
+z-index: -1; //achter tekst
+
+<br clear="all"> all left right //tekst begint bij...
+<img align="left right middle bottem top">
+<table cellspacing="10" cellpadding="10">
+
+<td valign="top"> middle bottom

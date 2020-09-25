@@ -1,0 +1,86 @@
+<!Doctype html>
+<html>
+	<head>
+		<!--head-->
+		<title>YOUR_TITLE</title>
+		<meta name="viewport" content="width=device-width , initial-scale=1.0">
+		<style>
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			body{
+				margin: 7px;
+				font-family: Consolas, Verdana, Geneva, Tahoma, sans-serif;
+			}
+			div{
+				margin: 5px;
+				border: 1px solid black;
+			}
+			#main{
+				width: 790px;
+				background-color: #7568E8;
+				margin: auto;
+			}
+			#header{
+				background-color: #4E7C3E;
+				height: 100px;
+			}
+			#titel{
+				margin: 0;
+				background-color: #FFED5D;
+				width: 50%;
+			}
+			#content{
+				background-color: #fff;
+				height: 300px;
+				float: left;
+				width: 666px;
+				margin-bottom: 10px;
+				overflow: auto;
+			}
+			#links{
+				background-color: #ccff00;
+				float: left;
+				width: 100px;
+			}
+			#footer{
+				clear: left;
+				background-color: #FF3323;
+			}
+			ul{
+				padding: 12px;
+				list-style: none;
+			}
+			ul a{
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<p>Body</p>
+		<div id="main">
+			<div id="header"><div id="titel">Titel</div></div>
+			<div id="links">
+				<ul>
+					<li><a href="#">Maandag</a></li>
+					<li><a href="#">Dinsdag</a></li>
+					<li><a href="#">Woensdag</a></li>
+					<li><a href="#">Donderdag</a></li>
+					<li><a href="#">Vrijdag</a></li>
+					<li><a href="#">Zaterdag</a></li>
+					<li><a href="#">Zondag</a></li>
+				</ul>
+			</div>
+			<div id="content">Inhoud<hr></div>
+			<div id="footer">Onder</div>
+		</div>
+		<script>
+			document.querySelectorAll("a").forEach(a=>{
+				a.addEventListener('click', (e)=>{
+					document.getElementById("content").innerHTML += "<br>" + e.path[0].innerHTML ;
+				})
+			})
+		</script>
+	</body>
+</html>

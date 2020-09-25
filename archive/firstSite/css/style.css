@@ -1,0 +1,42 @@
+p{
+	color: #1133DD;
+	font-size: 1.5em;
+	font-family: 'Chilanka', cursive;
+}
+#container{
+	display: grid;
+	grid-template-areas :
+	"one two"
+	". ."
+	"three four"
+	"lorem lorem";
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto 2em auto auto;
+}
+#h{
+	text-align: center;
+	color: red;
+	grid-area: three;
+}
+#p{
+	grid-area: one;
+}
+.bigLetter{
+	font-size: 1.5em;
+}
+#imgContainer{
+	grid-area: two;
+	text-align: center;
+}
+#links{
+	grid-area: four;
+	text-align: center;
+}
+#microsoftImg{
+	/*width: 75%;
+	height: auto;*/
+	text-align: center;
+}
+#lorem{
+	grid-area: lorem;
+}

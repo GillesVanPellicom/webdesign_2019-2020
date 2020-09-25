@@ -1,0 +1,201 @@
+<!doctype html>
+
+<head>
+    <style>
+
+        ul {
+            list-style-type: none;
+        }
+
+        #tmain {
+            border: 1px purple;
+        }
+
+        #p2 {
+            color: blue;
+        }
+
+        #c1 {
+            background-color: yellow;
+            
+        }
+
+        #td1 {
+            background-image: url("images/bloem.png");
+        }
+
+        #td2 {
+            background-image: url("images/bloem.png");
+            background-repeat: y-repeat;
+        }
+
+        .tgreen {
+            background-color: lime;
+        }
+
+        .pinkt {
+            background-color: pink;
+            border-top: 5px solid green;
+            border-right: 5px dashed yellow;
+            border-bottom: 5px dotted green;
+            border-left: 5px solid blue;
+        }
+
+        #bAA {
+            color: red;
+        }
+
+        ul li a {
+            text-decoration: underline;
+            color: black;
+        }
+
+        ul li ul a {
+            color: green;
+            text-decoration: underline;
+        }
+
+        ul li ul a:first-line {
+            color: red;
+        }
+
+        #fch:first-letter {
+            color: green;
+            text-decoration: bold;
+        }
+
+        #pgreen {
+            color: darkgreen;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p name="p1" id="p1" align="center">De body heeft een achtergrondafbeelding die enkel verticaal herhaald word. Alle
+        text binnen de body heeft kleur #00066
+        <br><strong>Deze tekst staat binnen een paragraaf. En is gecentreerd op de pagina</strong>
+        <br> De lijn hieronder is 1000 pixels breed 5px hoog en grijs.
+        <p>
+            <hr margain="auto">
+            <span></span>
+            <p name="p2" id="p2" align="center">Deze tekst niet overnemen etc...
+                <br>..breaks in bijschrift..
+                <br>..rode boord..</p>
+            <table border="1" align="center" id="tmain">
+                <tr>
+                    <td name="c1" id="c1" colspan="3">aaaa</td>
+                </tr>
+                <tr>
+                    <td width="10%" name="td1" id="td1"></td>
+                    <td>aaa</td>
+                    <td width="10%" name="td2" id="td2"></td>
+                </tr>
+                <tr>
+                    <td rowspan="2" class="pinkt">Deze cel overspant net zoals die aan de overkant, twee rijen</td>
+                    <td>
+                        <p id="fch">De tekst in deze paragraaf jeeft een eerste letter die groen is en de eerste
+                            tekstregel word rood met spall caps. Alle anderer regels krijgen terug de basiskleur. Dit
+                            gebeurt allemaal via css, en werkt alleen als de paragraaf binnen een cel van een tabel
+                            staat. De tekst in deze cel staat bovenaan gopositioneerd, maar door de paragraaf valt dit
+                            niet op</p>
+                    </td>
+                    <td rowspan="2" class="pinkt">De opmaak van deze die aan de andere jandt is dezelfde, en het gebeurt
+                        via css. Boord is 5 pixels, kleur is pink</td>
+
+                </tr>
+                <tr>
+                    <td>
+                        <p id="pgreen"><strong>Hier vind je tekst binnen een span. Tekstkleur is darkgreen, vetgedrukt.
+                                Grootte is 90% en is uitgelijnd tegen de bovenzijde van de cel. De tekst begint op 10
+                                pixels van de linkerzijde van de cel.</strong></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p align="left">Hiernaast nemen we cel 2 en 4 samen. Er zit een genste lijst &lt;ul&gt; in.</p>
+                    </td>
+                    <td colspan="2">
+                        <ul>
+                            <li>Zaklamp</li>
+                            <li><a href="https://google.com">Batterijen</a>
+                                <ul>
+                                    <li id="bAA">AA</li>
+                                    <li><a href="https://www.google.com">9 Volt</a></li>
+                                </ul>
+                            </li>
+                            <li>Jas</li>
+                        </ul>
+                        De lijst heeft geen voorteken. Allee nde geneste listitems worden rood (door css pseudo
+                        elementen of patroonvergelijking te gebruiken) Listitems batterijen en 9 volrt zijn linken. een
+                        link binnen een geordende lijst is zwart en onderlijnd, een link binnen een geneste item is
+                        groen en onderlijnd
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <fieldset>
+                            <legend>Formulier:</legend>
+                            <form>
+                                <table border="1" align="center" class=tgreen>
+                                    <tr>
+                                        <td colspan="2">
+                                            <table border="0"	>
+                                                <tr>
+                                                    <td>Naam:</td>
+                                                    <td>
+                                                        <input type="text" name="t1" id="t1">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Email:</td>
+                                                    <td>
+                                                        <input type="text" name="t2" id="t2" </td> <table border="1"
+                                                            align="center">
+                                                </tr>
+                                            </table>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <table border="0">
+                                                <tr>
+                                                    <td>zfefzef</td>
+                                                    <td><span align="left"><input type="radio" name="r_gender"
+                                                                id="r_gender">Man<br>
+                                                            <input type="radio" name="r_gender"
+                                                                id="r_gender">Vrouw<br><span></td>
+
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+                    </td>
+                    <td>
+                        <table align="top">
+                            <tr>
+                                <td><select align="left">
+                                        <option>Blauw</option>
+                                        <option>Groen</option>
+                                        <option>Rood</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <td>aa</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            </form>
+
+            </fieldset>
+            </td>
+            <td>
+                <p align="left">In de cel links van mij komt een formulier. Cel 1 en 2 nemen we samen. In dit formulier
+                    zit een genste tabel.</p>
+            </td>
+            </tr>
+
+            </table>
+</body>

@@ -1,0 +1,28 @@
+<!doctype html>
+<head>
+    <title>Javascript - BMI</title>
+    <style>
+        body {
+            color:#FFFFFF;
+            background-color:#242424;
+            font-family:verdana, arial;
+            }
+    </style>
+</head>
+<body>
+    <script>
+        var naam = prompt("Voer u naam in","Unnamed Person");
+        alert("Beste " + naam +". We gaan nu uw BMI berekenen.");
+        var l = prompt("Voer u lengte in (in Meter. , = .)","0");
+        var m = prompt("voer u gewicht in (in kilogram)","0");
+        var bmi = m/(l*l);
+        if (bmi <= 20) {
+            alert("uw BMI is: "+bmi+" U kunt ieder moment sterven.")
+        } else if (bmi <=25) {
+			alert("Net goed")
+		} else if (bmi <= 30) {
+		alert("Ga niet op een dak staan")
+        } else {
+            alert("U zult niet stervan aan ontbering.");
+    </script>
+</body>

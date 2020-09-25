@@ -1,0 +1,60 @@
+<!Doctype html>
+<html>
+	<head>
+		<!--head-->
+		<title>Forms</title>
+		<meta name="viewport" content="width=device-width , initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<!--content-->
+		<form name="persoonlijkeGegevens">
+			<table>
+				<tr>
+					<td width="100">
+						<label for="naam">Naam:</label>
+					</td>
+					<td>
+						<input type="text" name="naam"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="adres">Adres:</label>
+					</td>
+					<td>
+						<input type="text" name="adres"><br>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="postcode">Postcode:</label>
+					</td>
+					<td>
+						<input type="text" name="postcode" maxlength="4">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="plaats">Knoppeke</label>
+					</td>
+					<td>
+						<input type="text" name="plaats">
+					</td>
+				</tr>
+			</table>
+		</form>
+		<form>
+			<input type="checkbox" name="meerAfb" checked>Meer afbeeldingen<br>
+			<input type="checkbox" name="favLinks" checked>Favoriete links<br>
+			<input type="checkbox" name="geluidsfrag" checked>Geluidsfragmenten<br>
+			<input type="checkbox" name="video" checked>Videobeelden
+		</form>
+		<form>
+			<input type="radio" name="meerAfb" checked>Meer afbeeldingen
+			<input type="radio" name="favLinks" checked>Favoriete links
+			<input type="radio" name="geluidsfrag" checked>Geluidsfragmenten
+			<input type="radio" name="video" checked>Videobeelden
+		</form>
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        #navTop {
+            display: inline-block;
+            background-color: yellow;
+            width: 780px;
+            height: 50px;
+            border: 1px solid black;
+        }
+
+        li {
+            list-style-type: none;
+            display: inline;
+            margin: 35px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            border: 1px solid red;
+            background-color: blue;
+        }
+    </style>
+    <script>
+        function test() {
+            var x = prompt("Geef lengte in cm", "0");
+            var y = prompt("Geef breedte in cm", "0");
+            var opp = x * y;
+
+            if (opp <= 300) {
+                alert("Onder 300? " + opp)
+            } else {
+                alert("Het oppervlakte is: " + opp);
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <div id="navTop">
+        <ul>
+            <li><a href="#">Maandag</a></li>
+            <li><a href="#">Dinsdag</a></li>
+            <li><a href="#">Woensdag</a></li>
+            <li><a href="#">Donderdag</a></li>
+            <li><a href="#">Vrijdag</a></li>
+        </ul>
+    </div>
+    aaaaaaa
+    <br>
+    <br>
+    <br>
+    <button type="submit" onclick="test()">aaa</button>
+
+</body>
+
+</html>
